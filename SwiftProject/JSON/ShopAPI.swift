@@ -9,13 +9,19 @@
 import Foundation
 import Moya
 
-let ShopProvider = MoyaProvider<Shop>()
+let shopProvider = MoyaProvider<ShopAPI>()
 let kImageHost = "http://file.joinsilk.com/"
-enum Shop {
+
+
+
+
+
+
+enum ShopAPI {
     case storeList(String)
 }
 
-extension Shop: TargetType {
+extension ShopAPI: TargetType {
     var baseURL: URL {
         return URL.init(string: "https://shopapi.joinsilk.com")!
     }

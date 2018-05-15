@@ -11,5 +11,7 @@ target 'SwiftProject' do
     pod 'SwiftyJSON'
     pod 'SnapKit'
     pod 'Kingfisher'
+    pod 'MBProgressHUD'
+    pod 'MJRefresh'
 end
 

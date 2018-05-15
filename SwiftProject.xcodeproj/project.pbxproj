@@ -14,6 +14,12 @@
 		F7056DBF20A02B9F000DE61F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7056DBE20A02B9F000DE61F /* Assets.xcassets */; };
 		F7056DC220A02B9F000DE61F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7056DC020A02B9F000DE61F /* LaunchScreen.storyboard */; };
 		F7056DD020A2C7F8000DE61F /* DouBanAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7056DCF20A2C7F8000DE61F /* DouBanAPI.swift */; };
+		F759454420A9602B001AB627 /* MBProgressHUD+XZ.m in Sources */ = {isa = PBXBuildFile; fileRef = F759454320A9602B001AB627 /* MBProgressHUD+XZ.m */; };
+		F759454720A962BF001AB627 /* WBRoundHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = F759454520A962BF001AB627 /* WBRoundHUD.m */; };
+		F759454E20A97F9E001AB627 /* JSONKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F759454D20A97F9E001AB627 /* JSONKit.swift */; };
+		F76CA12C20A584D6004C9975 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76CA12B20A584D6004C9975 /* BaseModel.swift */; };
+		F76CA12E20A586A3004C9975 /* XZNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76CA12D20A586A3004C9975 /* XZNetwork.swift */; };
+		F76CA13020A59A9B004C9975 /* XZRequestPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76CA12F20A59A9B004C9975 /* XZRequestPlugin.swift */; };
 		F7FFE0DF20A3F97A00B47E23 /* ShopAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FFE0DE20A3F97A00B47E23 /* ShopAPI.swift */; };
 		F7FFE0E320A3FB5200B47E23 /* StoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FFE0E220A3FB5200B47E23 /* StoreModel.swift */; };
 		F7FFE0E520A4169100B47E23 /* CleanJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FFE0E420A4169000B47E23 /* CleanJSON.swift */; };
@@ -33,6 +39,15 @@
 		F7056DC120A02B9F000DE61F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F7056DC320A02B9F000DE61F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7056DCF20A2C7F8000DE61F /* DouBanAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DouBanAPI.swift; sourceTree = "<group>"; };
+		F759454120A9602A001AB627 /* SwiftProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftProject-Bridging-Header.h"; sourceTree = "<group>"; };
+		F759454220A9602B001AB627 /* MBProgressHUD+XZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+XZ.h"; sourceTree = "<group>"; };
+		F759454320A9602B001AB627 /* MBProgressHUD+XZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+XZ.m"; sourceTree = "<group>"; };
+		F759454520A962BF001AB627 /* WBRoundHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBRoundHUD.m; sourceTree = "<group>"; };
+		F759454620A962BF001AB627 /* WBRoundHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBRoundHUD.h; sourceTree = "<group>"; };
+		F759454D20A97F9E001AB627 /* JSONKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONKit.swift; sourceTree = "<group>"; };
+		F76CA12B20A584D6004C9975 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		F76CA12D20A586A3004C9975 /* XZNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XZNetwork.swift; sourceTree = "<group>"; };
+		F76CA12F20A59A9B004C9975 /* XZRequestPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XZRequestPlugin.swift; sourceTree = "<group>"; };
 		F7FFE0DE20A3F97A00B47E23 /* ShopAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopAPI.swift; sourceTree = "<group>"; };
 		F7FFE0E220A3FB5200B47E23 /* StoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreModel.swift; sourceTree = "<group>"; };
 		F7FFE0E420A4169000B47E23 /* CleanJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CleanJSON.swift; sourceTree = "<group>"; };
@@ -90,6 +105,8 @@
 		F7056DB620A02B9E000DE61F /* SwiftProject */ = {
 			isa = PBXGroup;
 			children = (
+				F759454820A962CF001AB627 /* OC */,
+				F76CA13120A59AA3004C9975 /* Network */,
 				F7FFE0E920A435BC00B47E23 /* Cell */,
 				F7056DB720A02B9E000DE61F /* AppDelegate.swift */,
 				F7056DB920A02B9E000DE61F /* ViewController.swift */,
@@ -98,8 +115,30 @@
 				F7056DC020A02B9F000DE61F /* LaunchScreen.storyboard */,
 				F7056DC320A02B9F000DE61F /* Info.plist */,
 				F7FFE0E620A4169500B47E23 /* JSON */,
+				F759454120A9602A001AB627 /* SwiftProject-Bridging-Header.h */,
 			);
 			path = SwiftProject;
+			sourceTree = "<group>";
+		};
+		F759454820A962CF001AB627 /* OC */ = {
+			isa = PBXGroup;
+			children = (
+				F759454220A9602B001AB627 /* MBProgressHUD+XZ.h */,
+				F759454320A9602B001AB627 /* MBProgressHUD+XZ.m */,
+				F759454620A962BF001AB627 /* WBRoundHUD.h */,
+				F759454520A962BF001AB627 /* WBRoundHUD.m */,
+			);
+			path = OC;
+			sourceTree = "<group>";
+		};
+		F76CA13120A59AA3004C9975 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F76CA12D20A586A3004C9975 /* XZNetwork.swift */,
+				F76CA12F20A59A9B004C9975 /* XZRequestPlugin.swift */,
+				F759454D20A97F9E001AB627 /* JSONKit.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		F7FFE0E620A4169500B47E23 /* JSON */ = {
@@ -110,6 +149,7 @@
 				F7056DCF20A2C7F8000DE61F /* DouBanAPI.swift */,
 				F7FFE0DE20A3F97A00B47E23 /* ShopAPI.swift */,
 				F7FFE0E220A3FB5200B47E23 /* StoreModel.swift */,
+				F76CA12B20A584D6004C9975 /* BaseModel.swift */,
 			);
 			path = JSON;
 			sourceTree = "<group>";
@@ -156,6 +196,7 @@
 				TargetAttributes = {
 					F7056DB320A02B9E000DE61F = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 				};
 			};
@@ -218,6 +259,8 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-SwiftProject/Pods-SwiftProject-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
@@ -228,6 +271,8 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
@@ -246,13 +291,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F759454720A962BF001AB627 /* WBRoundHUD.m in Sources */,
+				F76CA13020A59A9B004C9975 /* XZRequestPlugin.swift in Sources */,
+				F76CA12C20A584D6004C9975 /* BaseModel.swift in Sources */,
 				F7FFE0E820A42E5F00B47E23 /* TableViewExt.swift in Sources */,
 				F7056DD020A2C7F8000DE61F /* DouBanAPI.swift in Sources */,
 				F7056DBA20A02B9E000DE61F /* ViewController.swift in Sources */,
 				F7FFE0EB20A435D900B47E23 /* StoreListTableViewCell.swift in Sources */,
 				F7FFE0DF20A3F97A00B47E23 /* ShopAPI.swift in Sources */,
+				F759454E20A97F9E001AB627 /* JSONKit.swift in Sources */,
+				F759454420A9602B001AB627 /* MBProgressHUD+XZ.m in Sources */,
 				F7056DB820A02B9E000DE61F /* AppDelegate.swift in Sources */,
 				F7FFE0E520A4169100B47E23 /* CleanJSON.swift in Sources */,
+				F76CA12E20A586A3004C9975 /* XZNetwork.swift in Sources */,
 				F7FFE0E320A3FB5200B47E23 /* StoreModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,14 +449,21 @@
 			baseConfigurationReference = 3F3A86C317B9003D158BDAF0 /* Pods-SwiftProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 546N5Q7E47;
 				INFOPLIST_FILE = SwiftProject/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = joinsilk.SwiftProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/SwiftProject/SwiftProject-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
 			};
 			name = Debug;
 		};
@@ -414,14 +472,20 @@
 			baseConfigurationReference = 0AB5FD792D5C43E6EDD2FFF1 /* Pods-SwiftProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 546N5Q7E47;
 				INFOPLIST_FILE = SwiftProject/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = joinsilk.SwiftProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/SwiftProject/SwiftProject-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
 			};
 			name = Release;
 		};

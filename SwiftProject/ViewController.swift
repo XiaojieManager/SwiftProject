@@ -24,22 +24,24 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
         self.tableView?.register(StoreListTableViewCell.self, forCellReuseIdentifier: cellId)
         self.view.addSubview(self.tableView!)
         
-        ShopProvider.request(.storeList("成都市")) { result in
-            switch result {
-            case .success(let response):
-                let decoder = JSONDecoder()
-                do {
-                    let model = try decoder.decode(StoreModel.self, from: response.data)
-                    self.model = model
-                }catch {
-                    print(error)
-                }
+        
+        self.tableView?.mj_header = MJRefreshNormalHeader.init(refreshingBlock: {
+            self.loadData()
+        })
+        
+        self.loadData()
+        
+    }
+    func loadData() -> Void {
+        XZNetwork.request(target: .storeList("成都市"), success: { result in
+            self.model = result.toModel(modelType: StoreModel.self)
                 DispatchQueue.main.async {
+                    self.tableView?.mj_header.endRefreshing()
                     self.tableView?.reloadData()
                 }
-            case .failure(let error):
-                print(error)
-            }
+            
+        }) { error in
+            self.tableView?.mj_header.endRefreshing()
         }
     }
     

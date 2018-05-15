@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -16,6 +17,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let tabBarController = UITabBarController.init()
+        let homeController = ViewController()
+        homeController.tabBarItem = UITabBarItem.init(title: "首页", image: UIImage.init(named: "home_tabBar_city_normal"), selectedImage: UIImage.init(named: "home_tabBar_city_selected"))
+        let homeNav = UINavigationController.init(rootViewController: homeController)
+        tabBarController.viewControllers = [homeNav]
+        
+        self.window = UIWindow.init(frame: UIScreen.main.bounds)
+        self.window?.rootViewController = tabBarController
+        self.window?.makeKeyAndVisible()
+        
         return true
     }
 
