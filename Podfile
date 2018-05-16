@@ -13,5 +13,6 @@ target 'SwiftProject' do
     pod 'Kingfisher'
     pod 'MBProgressHUD'
     pod 'MJRefresh'
+    pod 'ReactiveCocoa'
 end
 

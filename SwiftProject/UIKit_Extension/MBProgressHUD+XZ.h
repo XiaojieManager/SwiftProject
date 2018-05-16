@@ -20,8 +20,6 @@
 + (void)showLoading;
 + (void)showLoadingInView:(UIView *)view;
 
-+ (void)showBoutiqueLoading;
-+ (void)showBoutiqueLoadingInView:(UIView *)view;
 
 + (void)showSuccessWithMessage:(NSString *)message;
 + (void)showSuccessWithMessage:(NSString *)message inView:(UIView *)view;

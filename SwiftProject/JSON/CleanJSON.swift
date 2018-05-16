@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+///当json数据某个值为空时，给予默认值
 public extension KeyedDecodingContainer {
     
     public func decode(_ type: Bool.Type, forKey key: KeyedDecodingContainer.Key) throws -> Bool {

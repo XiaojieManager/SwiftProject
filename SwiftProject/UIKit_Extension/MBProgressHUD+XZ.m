@@ -7,21 +7,8 @@
 //
 
 #import "MBProgressHUD+XZ.h"
-#import "WBRoundHUD.h"
 @implementation MBProgressHUD (XZ)
 
-+ (WBRoundHUD *)animationHUD{
-    static WBRoundHUD *roundHUD = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        roundHUD = [[WBRoundHUD alloc] initWithFrame:CGRectMake(0, 0, 45, 45) type:WBRoundHUDTypeUniform roundColor: nil];
-        roundHUD.backgroundColor = [UIColor colorWithRed:242/255.f green:242/255.f blue:242/255.f alpha:1];
-        roundHUD.duration = 1.5;
-        roundHUD.roundColor = [UIColor lightGrayColor];
-        [roundHUD start];
-    });
-    return roundHUD;
-}
 ///1.5s后自动消失
 + (void)showMessage:(NSString *)message{
     [self showMessage:message inView:nil];
@@ -64,29 +51,6 @@
     [hud showAnimated:YES];
 }
 
-+ (void)showBoutiqueLoading{
-    [self showBoutiqueLoadingInView:nil];
-}
-+ (void)showBoutiqueLoadingInView:(UIView *)view{
-    if (view == nil) view = (UIView*)[UIApplication sharedApplication].delegate.window;
-
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
-    
-    // Set the custom view mode to show any view.
-    hud.mode = MBProgressHUDModeCustomView;
-    // Set an image view with a checkmark.
-    UIImageView *imageV = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"mb_loading_base"]];
-    [imageV addSubview:[self animationHUD]];
-    
-    hud.customView = imageV;
-    
-    hud.bezelView.style = MBProgressHUDBackgroundStyleSolidColor;
-    hud.bezelView.color = [UIColor clearColor];
-    hud.userInteractionEnabled = NO;
-
-    [hud showAnimated:YES];
-
-}
 
 + (void)showSuccessWithMessage:(NSString *)message{
     [self showSuccessWithMessage:message inView:nil];

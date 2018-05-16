@@ -8,6 +8,20 @@
 
 import Foundation
 
+protocol MapCodable: Codable {
+    
+}
+extension MapCodable{
+    func toDictionary() -> Dictionary<String,Any> {
+        let mirro = Mirror(reflecting: self)
+        var dic = [String:Any]()
+        for case let (key?, value) in mirro.children {
+            dic[key] = value
+        }
+        return dic
+    }
+}
+
 extension Data {
     func toModel<T:Codable>(modelType:T.Type) -> T? {
         do {
@@ -41,17 +55,6 @@ extension Data {
 
 extension Array {
     
-    func toJSONString() -> String? {
-        if (!JSONSerialization.isValidJSONObject(self)) {
-            return nil
-        }
-        if let newData : Data = try? JSONSerialization.data(withJSONObject: self, options: []) {
-            let JSONString = NSString(data:newData as Data,encoding: String.Encoding.utf8.rawValue)
-            return JSONString as String? ?? nil
-        }
-        
-        return nil
-    }
     func toData() -> Data? {
         if JSONSerialization.isValidJSONObject(self) {
             if let data = try? JSONSerialization.data(withJSONObject: self, options: .prettyPrinted) {
@@ -60,30 +63,10 @@ extension Array {
         }
         return nil
     }
-    func toModel<T : Decodable>(_ type:[T].Type)  -> Array<T>? {
-        let decoder = JSONDecoder()
-        if let data =  self.toData() {
-            if let obj = try? decoder.decode(type, from: data) {
-                return obj
-            }
-        }
-        return nil
-    }
 }
 
 
 extension Dictionary {
-    func toJSONString() -> String? {
-        if (!JSONSerialization.isValidJSONObject(self)) {
-            return nil
-        }
-        if let newData : Data = try? JSONSerialization.data(withJSONObject: self, options: []) {
-            let JSONString = NSString(data:newData as Data,encoding: String.Encoding.utf8.rawValue)
-            return JSONString as String? ?? nil
-        }
-        
-        return nil
-    }
     func toData() -> Data? {
         if JSONSerialization.isValidJSONObject(self) {
             if let data = try? JSONSerialization.data(withJSONObject: self, options: .prettyPrinted) {
@@ -97,15 +80,9 @@ extension Dictionary {
 
 extension String {
     func toData() -> Data? {
-        return self.data(using: .utf8)
-    }
-    func toDict() -> [String:Any]? {
-        guard let jsonData:Data = self.data(using: .utf8) else {
+        if (!JSONSerialization.isValidJSONObject(self)) {
             return nil
         }
-        if let dict = try? JSONSerialization.jsonObject(with: jsonData, options: .mutableContainers) {
-            return dict as? [String : Any] 
-        }
-        return nil
+        return self.data(using: .utf8)
     }
 }

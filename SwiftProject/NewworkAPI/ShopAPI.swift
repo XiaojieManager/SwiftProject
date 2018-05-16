@@ -13,12 +13,9 @@ let shopProvider = MoyaProvider<ShopAPI>()
 let kImageHost = "http://file.joinsilk.com/"
 
 
-
-
-
-
 enum ShopAPI {
     case storeList(String)
+    case uploadPhoto(Data)
 }
 
 extension ShopAPI: TargetType {
@@ -33,7 +30,7 @@ extension ShopAPI: TargetType {
     var method: Moya.Method {
         return .post
     }
-    
+    //测试数据
     var sampleData: Data {
         return "{}".data(using: String.Encoding.utf8)!
     }
@@ -44,7 +41,11 @@ extension ShopAPI: TargetType {
             var params:[String:Any] = [:]
             params["name"] = name
             return .requestParameters(parameters: params, encoding: URLEncoding.default)
+        case .uploadPhoto(let data):
+            let multipartFormData = MultipartFormData(provider: .data(data), name: "file", fileName: "someImage", mimeType: "multipart/form-data")
+            return .uploadCompositeMultipart([multipartFormData], urlParameters: ["token":"token"])
         }
+        
     }
     
     var headers: [String : String]? {

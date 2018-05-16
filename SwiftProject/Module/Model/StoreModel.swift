@@ -8,12 +8,8 @@
 
 import Foundation
 
-struct StoreModel : Codable{
+struct StoreModel : MapCodable{
     var data:[DataInfoModel] = []
-    
-    init() {
-        
-    }
 }
 struct DataInfoModel:Codable {
     var iden:String

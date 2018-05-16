@@ -30,16 +30,14 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
         })
         
         self.loadData()
-        
     }
     func loadData() -> Void {
-        XZNetwork.request(target: .storeList("成都市"), success: { result in
-            self.model = result.toModel(modelType: StoreModel.self)
+        XZNetwork.request(target: .storeList("成都市"), success: { data in
+            self.model = data.toModel(modelType: StoreModel.self)
                 DispatchQueue.main.async {
                     self.tableView?.mj_header.endRefreshing()
                     self.tableView?.reloadData()
                 }
-            
         }) { error in
             self.tableView?.mj_header.endRefreshing()
         }

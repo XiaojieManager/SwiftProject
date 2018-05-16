@@ -12,7 +12,6 @@ import Alamofire
 
 typealias NetworkAPI = ShopAPI
 
-let provider = MoyaProvider<NetworkAPI>.init( manager: DefaultAlamofireManager.shareManager, plugins:[RequestLoadingPlugin()])
 
 public class XZNetwork {
     typealias successCallBack = (_ result:Data) -> Void
@@ -24,7 +23,7 @@ public class XZNetwork {
             switch result {
             case let  .success(response):
                     if let dic = response.data.toDictionary() {
-                        if let httpCode = (dic["httpCode"] as? Int) {
+                        if let httpCode = (dic["httpCode"] as? Int) {//业务层代码
                             if httpCode == 200{
                                 success(response.data)
                             }else{
@@ -43,13 +42,26 @@ public class XZNetwork {
     
 }
 
+extension XZNetwork{
+    
+  
+    
+    static let provider = XZNetwork.getProvider()
+    static func getProvider() -> MoyaProvider<NetworkAPI> {
+        var logOpen = false
+        #if DEBUG
+        logOpen = true
+        #endif
+        return  MoyaProvider<NetworkAPI>.init( manager: DefaultAlamofireManager.shareManager, plugins:[RequestLoadingPlugin(),NetworkLoggerPlugin.init(verbose: logOpen, cURL: logOpen, output: nil, requestDataFormatter: nil, responseDataFormatter: nil)])
+    }
+}
 
 final class DefaultAlamofireManager: Alamofire.SessionManager {
     static var shareManager: DefaultAlamofireManager  {
         let configuration = URLSessionConfiguration.default
         configuration.httpAdditionalHeaders = Manager.defaultHTTPHeaders
-        configuration.timeoutIntervalForRequest = 3
-        configuration.timeoutIntervalForResource = 3
+        configuration.timeoutIntervalForRequest = 30
+        configuration.timeoutIntervalForResource = 10
         return DefaultAlamofireManager(configuration: configuration)
     }
 }
