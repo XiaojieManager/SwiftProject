@@ -24,7 +24,7 @@
         }
         
 
-###Codable
+### Codable
 
 扩展了集合类型，直接利用Codable 完成Model,Dictionary,Array,String,Data之间的相互转换，详情见：JSONKit
 
@@ -35,4 +35,4 @@
     let jsonStr = dic?.toJSONString()
     ......
     
-###欢迎star
+### 欢迎star
