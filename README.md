@@ -1,7 +1,7 @@
 # SwiftProject
 学习swift 玩的demo
 
-本项目只是自己学习swift的，记录及实践的过程及结果
+本项目是自己学习swift的记录、实践的过程及结果，会持续不断的更新
 
 ## 简单封装Moya，及Codable协议
 ### Moya
