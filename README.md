@@ -5,28 +5,28 @@
 
 ## 简单封装Moya，及Codable协议
 ### Moya
-自定义manager
+自定义Alamofire.SessionManager
 
-自定义plugins
+NetworkActivityPlugin （isShowHUD）
 
 ......(待续)
 
 使用姿势:
 
-        XZNetwork.request(target: .storeList("成都市"), success: { data in
+        XZNetwork().request(ShopAPI.storeList("成都市"), progress: nil, success: { (data) in
             self.model = data.toModel(modelType: StoreModel.self)
-                DispatchQueue.main.async {
-                    self.tableView?.mj_header.endRefreshing()
-                    self.tableView?.reloadData()
-                }
-        }) { error in
+            DispatchQueue.main.async {
+                self.tableView?.mj_header.endRefreshing()
+                self.tableView?.reloadData()
+            }
+        }) { (error) in
             self.tableView?.mj_header.endRefreshing()
         }
         
 
 ### Codable
 
-扩展了集合类型，直接利用Codable 完成Model,Dictionary,Array,String,Data之间的相互转换，详情见：JSONKit
+扩展了集合类型，利用Codable 完成Model,Dictionary,Array,String,Data之间的相互转换，详情见：JSONKit
 
 使用姿势：
 
