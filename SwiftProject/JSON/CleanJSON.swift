@@ -88,7 +88,6 @@ public extension KeyedDecodingContainer {
         }
         return nil
     }
-    
     public func decodeIfPresent(_ type: Float.Type, forKey key: K) throws -> Float? {
         
         guard contains(key) else { return nil }

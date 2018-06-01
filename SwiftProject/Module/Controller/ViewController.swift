@@ -7,24 +7,20 @@
 //
 
 import UIKit
-import SwiftyJSON
 import Kingfisher
 
 class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSource {
 
     var tableView:UITableView?
     var model:StoreModel?
-    
-    let cellId: String = "SwiftCell"
+    var page:Int = 1
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
        self.tableView = UITableView.creatTableView(self)
-        self.tableView?.register(StoreListTableViewCell.self, forCellReuseIdentifier: cellId)
+        self.tableView?.xz_registerCell(cell: StoreListTableViewCell.self)
         self.view.addSubview(self.tableView!)
-        
-        
         self.tableView?.mj_header = MJRefreshNormalHeader.init(refreshingBlock: {
             self.loadData()
         })
@@ -32,13 +28,14 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
         self.loadData()
     }
     func loadData() -> Void {
-        XZNetwork.request(target: .storeList("成都市"), success: { data in
+        
+        XZNetwork().request(ShopAPI.storeList("成都市"), progress: nil, success: { (data) in
             self.model = data.toModel(modelType: StoreModel.self)
-                DispatchQueue.main.async {
-                    self.tableView?.mj_header.endRefreshing()
-                    self.tableView?.reloadData()
-                }
-        }) { error in
+            DispatchQueue.main.async {
+                self.tableView?.mj_header.endRefreshing()
+                self.tableView?.reloadData()
+            }
+        }) { (error) in
             self.tableView?.mj_header.endRefreshing()
         }
     }
@@ -59,11 +56,9 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
     //创建各单元显示内容(创建参数indexPath指定的单元）
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath)
         -> UITableViewCell {
-            //为了提供表格显示性能，已创建完成的单元需重复使用
-            let cell = tableView.dequeueReusableCell(
-                withIdentifier: cellId, for: indexPath)
-            //设置单元格内容
-            if let storeCell = cell as? StoreListTableViewCell {
+            let cell = tableView.dequeueReusableCell(withIdentifier: StoreListTableViewCell.identifier, for: indexPath)
+           if   let storeCell = cell as? StoreListTableViewCell
+            {
                 if let list =  model?.data  {
                     let infoModel:DataInfoModel = list[indexPath.row]
                     storeCell.titleLabel?.text = infoModel.name

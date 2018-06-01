@@ -11,14 +11,16 @@ import Foundation
 protocol MapCodable: Codable {
     
 }
-extension MapCodable{
-    func toDictionary() -> Dictionary<String,Any> {
-        let mirro = Mirror(reflecting: self)
-        var dic = [String:Any]()
-        for case let (key?, value) in mirro.children {
-            dic[key] = value
+extension MapCodable{ //系统 Codable 协议 不允许扩展
+    func toData() -> Data? {
+        let encoder = JSONEncoder()
+        encoder.outputFormatting = .prettyPrinted //输出格式好看点
+        do {
+           return  try encoder.encode(self)
+        } catch  {
+            debugPrint(error.localizedDescription)
+            return nil
         }
-        return dic
     }
 }
 

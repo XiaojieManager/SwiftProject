@@ -11,7 +11,6 @@ import UIKit
 let kWidth:CGFloat = UIScreen.main.bounds.size.width
 let kHeight:CGFloat = UIScreen.main.bounds.size.height
 
-
 extension UITableView {
     static func creatTableView(_ delegate: Any) -> UITableView {
         let tableView:UITableView = UITableView.init(frame: CGRect.init(origin: CGPoint.init(x: 0, y: 0), size: CGSize.init(width: kWidth, height: kHeight)), style: .plain)
@@ -22,6 +21,15 @@ extension UITableView {
 
         return tableView
     }
+    func xz_registerCell<T:UITableViewCell>(cell:T.Type) {
+        register(cell, forCellReuseIdentifier: cell.identifier)
+    }
+}
+extension UITableViewCell {
+    static var identifier:String {
+        return String(describing: self)
+    }
+
 }
 extension UILabel {
     static func label(title:String?, font:UIFont?, textColor:UIColor?) -> UILabel {

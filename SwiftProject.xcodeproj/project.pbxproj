@@ -17,16 +17,29 @@
 		F759454E20A97F9E001AB627 /* JSONKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F759454D20A97F9E001AB627 /* JSONKit.swift */; };
 		F759455B20AACF44001AB627 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F759455A20AACF44001AB627 /* LoginViewController.swift */; };
 		F759455D20AACF52001AB627 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F759455C20AACF52001AB627 /* LoginView.swift */; };
-		F759455F20AACFEC001AB627 /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F759455E20AACFEC001AB627 /* LoginTextField.swift */; };
 		F759456220AADAED001AB627 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F759456120AADAED001AB627 /* LoginViewModel.swift */; };
 		F76CA12E20A586A3004C9975 /* XZNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76CA12D20A586A3004C9975 /* XZNetwork.swift */; };
 		F76CA13020A59A9B004C9975 /* XZRequestPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76CA12F20A59A9B004C9975 /* XZRequestPlugin.swift */; };
+		F76DE2F020B65CE400F8CFA7 /* XZResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76DE2EF20B65CE400F8CFA7 /* XZResponse.swift */; };
 		F7FFE0DF20A3F97A00B47E23 /* ShopAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FFE0DE20A3F97A00B47E23 /* ShopAPI.swift */; };
 		F7FFE0E320A3FB5200B47E23 /* StoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FFE0E220A3FB5200B47E23 /* StoreModel.swift */; };
 		F7FFE0E520A4169100B47E23 /* CleanJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FFE0E420A4169000B47E23 /* CleanJSON.swift */; };
 		F7FFE0E820A42E5F00B47E23 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FFE0E720A42E5F00B47E23 /* UIViewExtension.swift */; };
 		F7FFE0EB20A435D900B47E23 /* StoreListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FFE0EA20A435D900B47E23 /* StoreListTableViewCell.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F726CC7A20B41E3700D2C829 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0AB5FD792D5C43E6EDD2FFF1 /* Pods-SwiftProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftProject/Pods-SwiftProject.release.xcconfig"; sourceTree = "<group>"; };
@@ -45,10 +58,10 @@
 		F759454D20A97F9E001AB627 /* JSONKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONKit.swift; sourceTree = "<group>"; };
 		F759455A20AACF44001AB627 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F759455C20AACF52001AB627 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		F759455E20AACFEC001AB627 /* LoginTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextField.swift; sourceTree = "<group>"; };
 		F759456120AADAED001AB627 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		F76CA12D20A586A3004C9975 /* XZNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XZNetwork.swift; sourceTree = "<group>"; };
 		F76CA12F20A59A9B004C9975 /* XZRequestPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XZRequestPlugin.swift; sourceTree = "<group>"; };
+		F76DE2EF20B65CE400F8CFA7 /* XZResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XZResponse.swift; sourceTree = "<group>"; };
 		F7FFE0DE20A3F97A00B47E23 /* ShopAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopAPI.swift; sourceTree = "<group>"; };
 		F7FFE0E220A3FB5200B47E23 /* StoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreModel.swift; sourceTree = "<group>"; };
 		F7FFE0E420A4169000B47E23 /* CleanJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CleanJSON.swift; sourceTree = "<group>"; };
@@ -170,7 +183,6 @@
 			children = (
 				F7FFE0EA20A435D900B47E23 /* StoreListTableViewCell.swift */,
 				F759455C20AACF52001AB627 /* LoginView.swift */,
-				F759455E20AACFEC001AB627 /* LoginTextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -206,6 +218,7 @@
 			children = (
 				F76CA12D20A586A3004C9975 /* XZNetwork.swift */,
 				F76CA12F20A59A9B004C9975 /* XZRequestPlugin.swift */,
+				F76DE2EF20B65CE400F8CFA7 /* XZResponse.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -231,6 +244,7 @@
 				F7056DB120A02B9E000DE61F /* Frameworks */,
 				F7056DB220A02B9E000DE61F /* Resources */,
 				BAD1AB54248CF117332B9CB9 /* [CP] Embed Pods Frameworks */,
+				F726CC7A20B41E3700D2C829 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -322,9 +336,9 @@
 				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -336,9 +350,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -358,6 +372,7 @@
 				F7056DBA20A02B9E000DE61F /* ViewController.swift in Sources */,
 				F7FFE0EB20A435D900B47E23 /* StoreListTableViewCell.swift in Sources */,
 				F7FFE0DF20A3F97A00B47E23 /* ShopAPI.swift in Sources */,
+				F76DE2F020B65CE400F8CFA7 /* XZResponse.swift in Sources */,
 				F759454E20A97F9E001AB627 /* JSONKit.swift in Sources */,
 				F759454420A9602B001AB627 /* MBProgressHUD+XZ.m in Sources */,
 				F759456220AADAED001AB627 /* LoginViewModel.swift in Sources */,
@@ -366,7 +381,6 @@
 				F759455D20AACF52001AB627 /* LoginView.swift in Sources */,
 				F76CA12E20A586A3004C9975 /* XZNetwork.swift in Sources */,
 				F7FFE0E320A3FB5200B47E23 /* StoreModel.swift in Sources */,
-				F759455F20AACFEC001AB627 /* LoginTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,8 +528,15 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 546N5Q7E47;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SwiftProject/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = joinsilk.SwiftProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/SwiftProject/SwiftProject-Bridging-Header.h";
@@ -534,8 +555,15 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 546N5Q7E47;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SwiftProject/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = joinsilk.SwiftProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/SwiftProject/SwiftProject-Bridging-Header.h";

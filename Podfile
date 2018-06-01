@@ -8,7 +8,7 @@ target 'SwiftProject' do
 	pod 'Alamofire'
     pod 'Moya'
     pod 'RxSwift'
-    pod 'SwiftyJSON'
+    pod 'RxCocoa'
     pod 'SnapKit'
     pod 'Kingfisher'
     pod 'MBProgressHUD'
